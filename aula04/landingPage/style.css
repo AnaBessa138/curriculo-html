@@ -392,8 +392,40 @@ line-height: 1.5;
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Garante que as colunas se ajustem automaticamente, com um mínimo de 250px e ocupando o espaço disponível */
-    gap: var(--espaco-lg);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Garante que as colunas se ajustem automaticamente, com um mínimo de 250px e ocupando o espaço disponível */
+    gap: var(--espaco-md);
 }
 
+.card {
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-lg);
+    padding: var(--espaco-xl);
+    transition: transform 0.2s ease; /* Transição suave para o efeito de hover */;
 
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+    box-shadow: 0 12px 40px #00000017;
+    
+}
+
+.card-icone {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--espaco-md);
+}
+
+.card-titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-bottom: var(--espaco-xs);
+}
+
+.card-descricao {
+    font-size: 0.9375rem;
+    color: var(--cor-texto-suave);
+    line-height: 1.7;
+}
